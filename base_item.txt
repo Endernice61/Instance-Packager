@@ -1,0 +1,35 @@
+"Item"
+{
+	"Type" "ITEM_#1"
+	"Editor"
+	{
+		"SubType"
+		{
+			"Name" "#2"
+			"Model" "cube.3ds"
+			"Palette"
+			{
+				"Tooltip" "#2"
+				"Image" "palette/#1.png"
+			} 
+			"Sounds" {
+				"SOUND_CREATED" "P2Editor.PlaceButton"
+				"SOUND_EDITING_ACTIVATE" "P2Editor.DropperDisabled"
+				"SOUND_EDITING_DEACTIVATE" "P2Editor.DropperEnabled"
+				"SOUND_DELETED" "P2Editor.RemoveButton"
+			}
+		}
+		"MovementHandle"    "HANDLE_4_DIRECTIONS"
+		"DesiredFacing"     "DESIRES_ANYTHING"
+	}
+	"Properties" {}
+	"Exporting"
+	{
+		"Instances"
+		{
+			"0" "instances/BEE2/#1.vmf"
+		}
+		"TargetName" ""
+		"Offset" "64 64 64"
+	}
+}

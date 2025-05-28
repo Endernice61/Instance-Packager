@@ -1,0 +1,14 @@
+"ID" "#1"
+"Name" "#1"
+"Desc" "Made with instance_packager.cmd"
+"Item"
+{ 
+	"ID" "ITEM_#1"
+	"Version"
+	{
+		"Styles"
+		{
+			"ANY_STYLE" "#1"
+		}
+	}
+}
