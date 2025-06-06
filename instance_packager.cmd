@@ -44,7 +44,10 @@ copy %input% "resources/instances"
 )
 mkdir "items/%pkdir%"
 @cd %scriptdir%
-@(for /F "delims=" %%i in (base_item.txt) do @CALL :replace2 "%%i" "%pkdir%" "%itemname%") > "%fullpkdir%\items\%pkdir%\editoritems.txt"
+@(for /F "delims=" %%i in (base_item.txt) do @(
+	set line=%%i
+	CALL :replace2 "%pkdir%" "%itemname%"
+)) > "%fullpkdir%\items\%pkdir%\editoritems.txt"
 @echo Created editoritems.txt
 @(echo "Properties" {& echo 	"Authors" "Instance Packager (Hovering Harry), Unknown Author"& echo 	"Description" "Made with instance packager"& echo }) > "%fullpkdir%\items\%pkdir%\properties.txt"
 @echo Created properties.txt
@@ -64,14 +67,12 @@ cd %fullpkdir%
 @goto end
 :replace2
 @setlocal enabledelayedexpansion
-@set line=%~1
-@set line=!line:#1=%~2!
-@echo !line:#2=%~3!
+@set line=!line:#1=%~1!
+@echo !line:#2=%~2!
 @endlocal
 @exit /b 0
 :replace
 @setlocal enabledelayedexpansion
-@set line=%~1
 @echo !line:#1=%pkdir%!
 @endlocal
 @exit /b 0

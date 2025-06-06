@@ -12,7 +12,8 @@
 				"Tooltip" "#2"
 				"Image" "palette/#1.png"
 			} 
-			"Sounds" {
+			"Sounds"
+			{
 				"SOUND_CREATED" "P2Editor.PlaceButton"
 				"SOUND_EDITING_ACTIVATE" "P2Editor.DropperDisabled"
 				"SOUND_EDITING_DEACTIVATE" "P2Editor.DropperEnabled"
