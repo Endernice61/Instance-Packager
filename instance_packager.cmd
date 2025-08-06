@@ -25,8 +25,8 @@
 )
 cd %beedir%
 cd packages
-mkdir %pkdir%
-@set fullpkdir=%beedir%\packages\%pkdir%
+mkdir _inst_%pkdir%
+@set fullpkdir=%beedir%\packages\_inst_%pkdir%
 @cd %scriptdir%
 @(for /F "delims=" %%i in (info.txt) do @(
 	set line=%%i
